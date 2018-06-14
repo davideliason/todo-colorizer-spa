@@ -5,6 +5,8 @@ import {
     Link
 } from "react-router-dom";
 
+import Home from './Home';
+
 const App = () => (
   <Router>
     <div>
@@ -19,6 +21,10 @@ const App = () => (
           <Link to="/todo">ToDo</Link>
         </li>
       </ul>
+
+      <hr />
+
+      <Route exact path="/" component={Home} />
     </div>
   </Router>
   )
@@ -31,5 +37,7 @@ const itemStyle = {
   display: "inline",
   padding: 20
 }
+
+
 
 export default App;
