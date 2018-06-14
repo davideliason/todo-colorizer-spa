@@ -23,6 +23,8 @@ class Colorizer extends React.Component {
 			bgColor: this.state.color
 		});
 		e.preventDefault();
+		this._input.value="";
+		this._input.focus();
 	}
 
 	render() {
@@ -30,9 +32,11 @@ class Colorizer extends React.Component {
 			backgroundColor: this.state.bgColor,
 			width: 200,
 			height: 200,
-			color: this.state.color,
+			color: "black",
 			padding: 50
 		}
+		// var self = this;
+
 		return (
 			    <div style={colorizerStyle}>
 				   <p>This is Colorizer</p>
@@ -41,6 +45,9 @@ class Colorizer extends React.Component {
 				   	<input 
 				   	   onChange={this.onChange}
 				   	   placeholder="new color"
+				   	   ref = {
+				   	   	(el) => this._input = el
+				   	   }
 				   	    />
 				   	<button type="submit">go</button>
 				   </form>
