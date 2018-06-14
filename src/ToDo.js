@@ -2,6 +2,12 @@ import React, {Component} from 'react';
 
 class TodoList extends React.Component {
 	render() {
+		constructor(props){
+			super(props);
+			this.state = {
+				todos: []
+			}
+		}
 		return (
 			 <div className="mainTodoList">
 			   <div className="header">
