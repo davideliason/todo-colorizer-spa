@@ -1,5 +1,22 @@
 import React, {Component} from 'react';
 
+class TodoItems extends React.Component {
+	createTasks(item) {
+		return <li key={item.key}>{item.text}</li>
+	}
+
+	render() {
+		var todoEntries = this.props.entries;
+		var listItems = todoEntries.map(this.createTasks);
+		console.log(listItems);
+		return (
+				<ul className="listed_todos">
+					{listItems}
+				</ul>
+			);
+	}
+}
+
 class TodoList extends React.Component {
 	  constructor(props) {
 		super(props);
@@ -47,6 +64,7 @@ class TodoList extends React.Component {
 			   	 	<button type="submit">add</button>
 			   	 </form>
 			   </div>
+			   <TodoItems entries={this.state.items}/>
 			 </div>
 			);
 	}
