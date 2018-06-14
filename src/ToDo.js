@@ -4,8 +4,16 @@ class ToDo extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			todos : []
+			todos : [],
+			todo : "blue"
 		};
+	this.updateTodo = this.updateTodo.bind(this);
+	}
+
+	updateTodo(e) {
+		this.setState({
+			todo: e.target.value
+		})
 	}
 	
 	render() {
@@ -18,6 +26,14 @@ class ToDo extends React.Component {
 		return (
 				<div style={todoStyle}>
 				  <h5>ToDo</h5>
+				  <p>{this.state.todo}</p>
+				  <form>
+				  	<input type="text"
+				  	  	   value={this.state.todo}
+				  	       onChange={this.updateTodo}
+				  		   placeholder="add todo"
+				  	/>
+				  </form>
 				</div>
 			);
 	}
