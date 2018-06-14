@@ -1,12 +1,19 @@
 import React, {Component} from 'react';
 
 class TodoList extends React.Component {
-	render() {
-		constructor(props){
+	constructor(props) {
 			super(props);
 			this.state = {
 				todos: []
 			}
+		}
+	render() {
+		
+
+		var mainTodoList = {
+			width: 200,
+			height: 300,
+			backgroundColor: "yellow"
 		}
 		return (
 			 <div className="mainTodoList">
