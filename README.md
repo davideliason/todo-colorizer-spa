@@ -3,10 +3,14 @@
 
 ### [David Eliason](http://www.davethemaker.com)
 
-#### June 13, 2018
+#### 2018: June 13, 14
 
 
 ### The Big Idea
 Build a Single Page App (SPA) using React and react-router. 
 
-Have an About page, a Colorizer, and a simple ToDo List, all accessible via a navigation bar that remains always accessible to the user.
+Try new React ideas by nesting various mini-apps within a SinglePageApp
+
+### Implementation
+1. Created parent nav using react-router pointing to:
+* Colorizer: practice using ref within form, click handlers, form
