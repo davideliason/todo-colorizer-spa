@@ -33,7 +33,7 @@ class Colorizer extends React.Component {
 			width: 200,
 			height: 200,
 			color: "black",
-			padding: 50
+			padding: 10
 		}
 		// var self = this;
 

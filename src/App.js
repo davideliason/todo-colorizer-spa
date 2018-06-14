@@ -9,26 +9,26 @@ import Home from './Home';
 import Colorizer from './Colorizer';
 import ToDo from './ToDo';
 
-const Book = ({match}) => {
+const StarWarsItem = ({match}) => {
    return (
       <div>
-        <p>{ match.params.bookID}</p>
+        <p>{ match.params.starwarsID}</p>
       </div>
     );
 }
 
-const Books = ({match}) => {
+const StarWars = ({match}) => {
   return (
       <div>
         <ul>
           <li>
-            <Link to={`${match.url}/scifi`}>scifi</Link>
+            <Link to={`${match.url}/Characters`}>Characters</Link>
           </li>
           <li>
-            <Link to={`${match.url}/mystery`}>mystery</Link>
+            <Link to={`${match.url}/Ships`}>Ships</Link>
           </li>
         </ul>
-        <Route path={`${match.path}/:bookID`} component={Book} />
+        <Route path={`${match.path}/:starwarsID`} component={StarWarsItem} />
       </div>  
     );
 }
@@ -48,14 +48,14 @@ const App = () => (
           <Link to="/todo">ToDo</Link>
         </li>
         <li style={itemStyle}>
-          <Link to="/books" component={Books}>Books</Link>
+          <Link to="/starwars" component={StarWars}>StarWars</Link>
         </li>
       </ul>
 
       <Route exact path="/" component={Home} />
       <Route path="/colorizer" component={Colorizer} />
       <Route path="/todo" component={ToDo} />
-      <Route path="/books" component={Books} />
+      <Route path="/starwars" component={StarWars} />
     </div>
   </Router>
   )
