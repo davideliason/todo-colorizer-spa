@@ -37,17 +37,17 @@ const StarWars = ({match}) => {
 const App = () => (
   <Router>
     <div>
-      <ul style={listStyle,navStyle}>
-        <li style={itemStyle}>
+      <ul style={styles.listStyle, styles.navStyle}>
+        <li style={styles.itemStyle}>
           <Link to="/">Home</Link>
         </li>
-        <li style={itemStyle}>
+        <li style={styles.itemStyle}>
           <Link to="/colorizer">Colorizer</Link>
         </li>
-        <li style={itemStyle}>
+        <li style={styles.itemStyle}>
           <Link to="/todo">ToDo</Link>
         </li>
-        <li style={itemStyle}>
+        <li style={styles.itemStyle}>
           <Link to="/starwars" component={StarWars}>StarWars</Link>
         </li>
       </ul>
@@ -59,20 +59,21 @@ const App = () => (
     </div>
   </Router>
   )
-const navStyle = {
+
+const styles = {
+  navStyle : {
   backgroundColor: "yellow",
-  padding: 20
+  padding: 20,
+  margin: 0
+   },
+  listStyle : {
+     listStyleType: "none"
+   }, 
+   itemStyle : {
+      display: "inline",
+      padding: 20
+    },
+  
 }
-
-const listStyle = {
-  listStyleType: "none"
-}
-
-const itemStyle = {
-  display: "inline",
-  padding: 20
-}
-
-
 
 export default App;
