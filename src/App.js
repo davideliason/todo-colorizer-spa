@@ -13,7 +13,7 @@ import ToDo from './ToDo';
 const App = () => (
   <Router>
     <div>
-      <ul style={listStyle}>
+      <ul style={listStyle,navStyle}>
         <li style={itemStyle}>
           <Link to="/">Home</Link>
         </li>
@@ -25,14 +25,17 @@ const App = () => (
         </li>
       </ul>
 
-      <hr />
 
       <Route exact path="/" component={Home} />
-      <Route path="/Colorizer" component={Colorizer} />
+      <Route path="/colorizer" component={Colorizer} />
       <Route path="/todo" component={ToDo} />
     </div>
   </Router>
   )
+const navStyle = {
+  backgroundColor: "yellow",
+  padding: 20
+}
 
 const listStyle = {
   listStyleType: "none"
