@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-
+import "./Todo.css";
 class TodoItems extends React.Component {
 	createTasks(item) {
 		return <li key={item.key}>{item.text}</li>
