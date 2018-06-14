@@ -6,6 +6,9 @@ import {
 } from "react-router-dom";
 
 import Home from './Home';
+import Colorizer from './Colorizer';
+import ToDo from './ToDo';
+
 
 const App = () => (
   <Router>
@@ -25,6 +28,8 @@ const App = () => (
       <hr />
 
       <Route exact path="/" component={Home} />
+      <Route path="/Colorizer" component={Colorizer} />
+      <Route path="/todo" component={ToDo} />
     </div>
   </Router>
   )
