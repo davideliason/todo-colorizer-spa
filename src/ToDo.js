@@ -13,10 +13,10 @@ class TodoList extends React.Component {
 		var mainTodoList = {
 			width: 200,
 			height: 300,
-			backgroundColor: "yellow"
+			backgroundColor: "green"
 		}
 		return (
-			 <div className="mainTodoList">
+			 <div style={mainTodoList}>
 			   <div className="header">
 			   	 <form>
 			   	 	<input placeholder="add todo">
