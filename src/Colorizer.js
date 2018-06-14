@@ -44,7 +44,7 @@ class Colorizer extends React.Component {
 				   <form onSubmit={this.onSubmit}>
 				   	<input 
 				   	   onChange={this.onChange}
-				   	   placeholder="new color"
+				   	   placeholder="add background color"
 				   	   ref = {
 				   	   	(el) => this._input = el
 				   	   }
